@@ -2,10 +2,12 @@ import React from "react";
 import { connect } from 'react-redux';
 import { submitLogin } from '../actions';
 
+
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 import '../App.css';
+
 
 class Login extends React.Component {
   state = {
@@ -21,16 +23,20 @@ class Login extends React.Component {
     e.preventDefault();
     this.props.submitLogin(this.state);
     this.setState({
+
       userName: '',
       password: ''
+
     })
   };
 
   render() {
     return (
+
       <div className="login-form">
         <h1>Welcome</h1>
         {/* <form className="LoginForm" onSubmit={this.handleSubmit}>
+
           <input
             value={this.state.userName}
             name="userName"
