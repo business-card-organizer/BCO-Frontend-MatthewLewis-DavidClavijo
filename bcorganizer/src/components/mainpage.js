@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Login from "./Login";
 
 class MainPage extends Component {
   constructor(props) {
@@ -8,9 +9,9 @@ class MainPage extends Component {
 
   render() {
     return (
-        <div className="userCard">
-            This will be the login/register page
-        </div>
+      <div className="userCard">
+        <Login />
+      </div>
     );
   }
 }
