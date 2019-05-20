@@ -1,3 +1,17 @@
 .login-form {
   text-align: center;
 }
+
+
+.MUI-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 30px 0 0;
+  padding: 0;
+}
+

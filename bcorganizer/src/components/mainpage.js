@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import Login from "./Login";
+import ButtonAppBar from '../components/Appbar';
 
 
 import Login from "./Login";
@@ -16,6 +18,7 @@ class MainPage extends Component {
     return (
       <div className="userCard">
 
+        <ButtonAppBar />
 
         <Login />
       </div>
