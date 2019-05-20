@@ -2,6 +2,10 @@ import React from "react";
 import { connect } from 'react-redux';
 import { submitLogin } from '../actions';
 
+
+import '../App.css';
+
+
 class Login extends React.Component {
   state = {
     userName: "",
@@ -16,14 +20,19 @@ class Login extends React.Component {
     e.preventDefault();
     this.props.submitLogin(this.state);
     this.setState({
+
         userName: '',
         password: ''
+
+
     })
   };
 
   render() {
     return (
+
       <div className="">
+
         <h1>Login</h1>
         <form className="LoginForm" onSubmit={this.handleSubmit}>
           <input
