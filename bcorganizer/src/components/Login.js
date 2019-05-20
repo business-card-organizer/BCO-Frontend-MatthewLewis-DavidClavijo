@@ -23,16 +23,13 @@ class Login extends React.Component {
     e.preventDefault();
     this.props.submitLogin(this.state);
     this.setState({
-
       userName: '',
       password: ''
-
     })
   };
 
   render() {
     return (
-
       <div className="login-form">
         <h1>Welcome</h1>
         {/* <form className="LoginForm" onSubmit={this.handleSubmit}>
