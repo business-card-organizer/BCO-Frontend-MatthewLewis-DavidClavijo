@@ -1,0 +1,3 @@
+base = "bcorganizer/"
+publish = "bcorganizer/build/"
+command = "yarn build"
