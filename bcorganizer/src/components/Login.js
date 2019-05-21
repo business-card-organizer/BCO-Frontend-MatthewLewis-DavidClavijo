@@ -9,11 +9,12 @@ import '../App.css';
 
 class Login extends React.Component {
   state = {
-    userName: "",
+    username: "",
     password: ""
   };
 
   handleChanges = e => {
+    console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -21,7 +22,7 @@ class Login extends React.Component {
     e.preventDefault();
     this.props.submitLogin(this.state);
     this.setState({
-      userName: '',
+      username: '',
       password: ''
     })
   };
@@ -54,8 +55,8 @@ class Login extends React.Component {
             label="Username"
             margin="normal"
             variant="outlined"
-            value={this.state.userName}
-            name="userName"
+            value={this.state.username}
+            name="username"
             onChange={this.handleChanges}
           />
           {/* className={classes.textField} */}
