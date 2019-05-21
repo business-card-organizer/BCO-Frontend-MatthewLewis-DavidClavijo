@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Route, NavLink } from 'react-router-dom';
 
+import Register from './Register';
 import Login from "./Login";
 import ButtonAppBar from '../components/Appbar';
 
@@ -12,8 +14,9 @@ class MainPage extends Component {
   render() {
     return (
       <div className="userCard">
-        <ButtonAppBar />
-        <Login />
+        <Route path='/' component={ButtonAppBar} />
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
       </div>
     );
   }
