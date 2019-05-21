@@ -1,16 +1,18 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { submitLogin } from '../actions';
+import { submitRegister } from '../actions';
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 import '../App.css';
 
-class Login extends React.Component {
+class Register extends React.Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    firstName: "",
+    lastName: ""
   };
 
   handleChanges = e => {
@@ -20,19 +22,42 @@ class Login extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.submitLogin(this.state);
-    this.setState({
-      username: '',
-      password: ''
-    })
+    this.props.submitRegister(this.state);
+    // this.setState({
+    //   username: '',
+    //   password: ''
+    //   firstname
+    // })
   };
 
   render() {
     return (
       <div className="login-form">
-        <h1>Welcome</h1>
+        <h1>Register</h1>
 
         <form className='MUI-form' onSubmit={this.handleSubmit} noValidate autoComplete="off">
+
+          <TextField
+            required
+            id="outlined-firstname-input"
+            label="Firstname"
+            margin="normal"
+            variant="outlined"
+            value={this.state.firstName}
+            name="firstName"
+            onChange={this.handleChanges}
+          />
+
+          <TextField
+            required
+            id="outlined-lastname-input"
+            label="Lastname"
+            margin="normal"
+            variant="outlined"
+            value={this.state.lastName}
+            name="lastName"
+            onChange={this.handleChanges}
+          />
 
           <TextField
             required
@@ -60,7 +85,7 @@ class Login extends React.Component {
           />
 
           <Button type="submit" variant="contained" color="primary" >
-            Sign In
+            Sign Up
           </Button>
         </form>
 
@@ -71,5 +96,5 @@ class Login extends React.Component {
 
 export default connect(
   null,
-  { submitLogin }
-)(Login);
+  { submitRegister }
+)(Register);
