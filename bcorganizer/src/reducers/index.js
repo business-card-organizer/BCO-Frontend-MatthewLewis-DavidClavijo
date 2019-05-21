@@ -1,20 +1,9 @@
-import { POST_START, POST_SUCCESS ,POST_FAIL } from "../actions";
+import { POST_START, POST_SUCCESS, POST_FAIL } from "../actions";
 import { REGISTER_START, REGISTER_SUCCESS, REGISTER_FAIL } from "../actions";
 import { FETCH_USERDATA_START, FETCH_USERDATA_SUCCESS, FETCH_USERDATA_FAIL } from "../actions";
 
 const initialState = {
-  user: {
-    id: null,
-    username: "",
-    first_name: "",
-    last_name: "",
-    password: "",
-    Organization: "",
-    job_title: "",
-    email: "",
-    phone: "",
-    qr_code: ""
-  },
+  user: [],
   isLoading: false,
   error: ""
 };
@@ -56,10 +45,7 @@ function reducer(state = initialState, action) {
         ...state,
         isLoading: false,
         error: "",
-        user: {
-          ...state.user,
-          qr_code: action.payload.data.qrCode
-        }
+        user: [...state.user, ...action.payload]
       };
     case REGISTER_FAIL:
       return {
@@ -79,8 +65,9 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         user: {
-        ...state.user,
-        first_name: action.payload.firstName
+          ...state.user,
+          first_name: action.payload.firstName,
+          last_name: action.payload.lastName
         }
       };
     case FETCH_USERDATA_FAIL:
