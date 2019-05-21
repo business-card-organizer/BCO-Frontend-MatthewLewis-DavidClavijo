@@ -5,13 +5,16 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
+import QRCode from 'qrcode.react';
+
 import { getUserData } from "../actions";
 
 const styles = theme => ({
   card: {
     justifyContent: "center",
     width: "85%",
-    display: "flex"
+    display: "flex",
+    margin: '0 auto'
   },
   details: {
     display: "flex",
@@ -26,12 +29,13 @@ const styles = theme => ({
 });
 
 class Loggedin extends React.Component {
-    componentDidMount() {
-        this.props.getUserData();
-    }
+  componentDidMount() {
+    this.props.getUserData();
+  }
 
   render() {
     const { classes } = this.props;
+    const { firstname, lastname } = this.props;
     console.log(this.props);
     return (
       <div>
@@ -40,13 +44,18 @@ class Loggedin extends React.Component {
             <div className={classes.details}>
               <CardContent className={classes.content}>
                 <Typography component="h5" variant="h5">
-                  {this.props.firstname}
+                  {`${firstname} ${lastname}`}
                 </Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                  {this.props.lastname}
+                  <QRCode
+                    value='https://thelastrolodex.netlify.com/'
+                    fgColor='pink'
+                    bgcolor='black'
+                    level='L'
+                    renderAs='svg'
+                  />
                 </Typography>
               </CardContent>
-              <div className={classes.controls}>info</div>
             </div>
             {/* <CardMedia
         className={classes.cover}
@@ -63,7 +72,8 @@ class Loggedin extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    firstname: state.user.first_name
+    firstname: state.user.first_name,
+    lastname: state.user.last_name
   };
 };
 
