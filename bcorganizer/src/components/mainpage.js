@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Route, NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import Register from './Register';
 import Login from "./Login";
 import ButtonAppBar from '../components/Appbar';
+import Loggedin from './Loggedin';
 
 class MainPage extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class MainPage extends Component {
         <Route path='/' component={ButtonAppBar} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
+        <Route path='/home' component={Loggedin} />
       </div>
     );
   }
