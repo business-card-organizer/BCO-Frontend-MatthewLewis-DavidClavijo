@@ -852,37 +852,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-<<<<<<< HEAD
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
-=======
-<<<<<<< HEAD
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
-<<<<<<< HEAD
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
-=======
-<<<<<<< HEAD
-
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
-=======
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
->>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-<<<<<<< HEAD
-=======
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
@@ -4058,37 +4028,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-<<<<<<< HEAD
 fbjs@^0.8.0, fbjs@^0.8.1:
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-fbjs@^0.8.0, fbjs@^0.8.1:
-=======
-<<<<<<< HEAD
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
-<<<<<<< HEAD
-fbjs@^0.8.0, fbjs@^0.8.1:
-=======
-
-<<<<<<< HEAD
-fbjs@^0.8.0, fbjs@^0.8.1:
-=======
-fbjs@^0.8.0:
->>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
-fbjs@^0.8.0, fbjs@^0.8.1:
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-<<<<<<< HEAD
-=======
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -4673,62 +4613,12 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
 hoist-non-react-statics@^2.3.1:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
 hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1, hoist-non-react-statics@^3.3.0:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
-<<<<<<< HEAD
-=======
-=======
-
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
->>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-<<<<<<< HEAD
-=======
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -6056,26 +5946,6 @@ jss@^9.8.7:
     symbol-observable "^1.1.0"
     warning "^3.0.0"
 
-<<<<<<< HEAD
-=======
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
-
-=======
->>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-<<<<<<< HEAD
-=======
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
 jsx-ast-utils@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.1.0.tgz#0ee4e2c971fb9601c67b5641b71be80faecf0b36"
@@ -8310,32 +8180,6 @@ react-error-overlay@^5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
 react-event-listener@^0.6.2:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.6.tgz#758f7b991cad9086dd39fd29fad72127e1d8962a"
@@ -8346,94 +8190,15 @@ react-event-listener@^0.6.2:
     warning "^4.0.1"
 
 react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
-<<<<<<< HEAD
-=======
-=======
-
-react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
->>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-<<<<<<< HEAD
-=======
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-=======
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
 react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-
-<<<<<<< HEAD
-=======
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
-
-<<<<<<< HEAD
-=======
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
-
-=======
-
->>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
->>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
-<<<<<<< HEAD
-=======
->>>>>>> 89fb09d116382258c897ac882409ee34315134e1
->>>>>>> 341140ae3b2e5e80c2243ed73997fbf985dea215
->>>>>>> 5a24fcdd2c8cd2e4771ac845b641bfa14b41cc2f
 react-qr-reader@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-qr-reader/-/react-qr-reader-2.2.1.tgz#dc89046d1c1a1da837a683dd970de5926817d55b"
