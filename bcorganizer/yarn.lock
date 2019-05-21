@@ -853,6 +853,7 @@
     regenerator-runtime "^0.13.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
 =======
 <<<<<<< HEAD
@@ -863,6 +864,11 @@
 >>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
@@ -4039,6 +4045,7 @@ fb-watchman@^2.0.0:
     bser "^2.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 fbjs@^0.8.0, fbjs@^0.8.1:
 =======
 
@@ -4049,6 +4056,11 @@ fbjs@^0.8.0:
 >>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+fbjs@^0.8.0, fbjs@^0.8.1:
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -4634,16 +4646,21 @@ hmac-drbg@^1.0.0:
     minimalistic-crypto-utils "^1.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
 hoist-non-react-statics@^2.3.1:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
 hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1, hoist-non-react-statics@^3.3.0:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4652,6 +4669,9 @@ hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
 >>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -5935,9 +5955,12 @@ jsqr@^1.2.0:
   integrity sha512-wKcQS9QC2VHGk7aphWCp1RrFyC0CM6fMgC5prZZ2KV/Lk6OKNoCod9IR6bao+yx3KPY0gZFC5dc+h+KFzCI0Wg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
 jss-camel-case@^6.0.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jss-camel-case/-/jss-camel-case-6.1.0.tgz#ccb1ff8d6c701c02a1fed6fb6fb6b7896e11ce44"
@@ -5990,6 +6013,10 @@ jss@^9.8.7:
     is-in-browser "^1.1.3"
     symbol-observable "^1.1.0"
     warning "^3.0.0"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
 
 <<<<<<< HEAD
 =======
@@ -8232,10 +8259,14 @@ react-error-overlay@^5.1.6:
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
 react-event-listener@^0.6.2:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.6.tgz#758f7b991cad9086dd39fd29fad72127e1d8962a"
@@ -8247,6 +8278,7 @@ react-event-listener@^0.6.2:
 
 react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -8254,19 +8286,30 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is
 >>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
 react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
 
 <<<<<<< HEAD
 =======
@@ -9491,6 +9534,7 @@ svgo@^1.0.0, svgo@^1.2.1:
     util.promisify "~1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 symbol-observable@1.2.0, symbol-observable@^1.0.4, symbol-observable@^1.1.0, symbol-observable@^1.2.0:
 =======
 <<<<<<< HEAD
@@ -9501,6 +9545,11 @@ symbol-observable@^1.2.0:
 >>>>>>> c257c028cc6a4224c690c0a8885d9464a0dca39e
 
 >>>>>>> df7cde917b3cb0a92da794e847208f58868f87c8
+=======
+
+symbol-observable@1.2.0, symbol-observable@^1.0.4, symbol-observable@^1.1.0, symbol-observable@^1.2.0:
+
+>>>>>>> 5b2a0e06afe54c67585efd8536a2689b036fd5c9
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
