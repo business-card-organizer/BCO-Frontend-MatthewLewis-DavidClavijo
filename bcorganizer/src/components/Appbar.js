@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 
@@ -18,22 +19,15 @@ const styles = {
 };
 
 class MyAppBar extends React.Component {
-  state = {
-    loggedin: false
-  };
-
-  handleChange = event => {
-    this.setState({ loggedin: event.target.checked });
-  };
 
   render() {
-    const { classes } = this.props;
-    const { loggedin } = this.state;
+    const { classes, isLoggedIn, username } = this.props;
+    console.log(this.username)
 
     return (
       <div>
         <AppBar position="static">
-          {!loggedin && (
+          {!isLoggedIn && (
             <div className={classes.root}>
               <Toolbar>
                 <Typography
@@ -52,11 +46,11 @@ class MyAppBar extends React.Component {
               </Toolbar>
             </div>
           )}
-          {loggedin && (
+          {isLoggedIn && (
             <div className={classes.root}>
               <Toolbar>
                 <Typography variant="h6" color="inherit">
-                  Welcome username
+                  {`Welcome ${username}`}
                 </Typography>
               </Toolbar>
             </div>
@@ -67,4 +61,11 @@ class MyAppBar extends React.Component {
   }
 }
 
-export default withStyles(styles)(MyAppBar);
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.isLoggedIn,
+    username: state.user.username
+  }
+}
+
+export default connect(mapStateToProps, {})(withStyles(styles)(MyAppBar));

@@ -22,7 +22,11 @@ class Register extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.submitRegister(this.state);
+    this.props.submitRegister(this.state)
+      .then(() => {
+        this.props.history.push('./home');
+      })
+
     // this.setState({
     //   username: '',
     //   password: ''

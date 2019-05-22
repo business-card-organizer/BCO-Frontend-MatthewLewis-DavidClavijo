@@ -9,13 +9,12 @@ export const POST_FAIL = "POST_FAIL";
 
 export const submitLogin = loginData => dispatch => {
   dispatch({ type: POST_START });
-  axios
+  return axios
     .post(
       "https://business-cards-organizer-ls.herokuapp.com/api/auth/login",
       loginData
     )
     .then(res => {
-      console.log(res);
       localStorage.setItem("token", res.data.token);
       dispatch({
         type: POST_START,
@@ -33,13 +32,12 @@ export const REGISTER_FAIL = "REGISTER_FAIL";
 
 export const submitRegister = registerData => dispatch => {
   dispatch({ type: REGISTER_START });
-  axios
+  return axios
     .post(
       "https://business-cards-organizer-ls.herokuapp.com/api/auth/register",
       registerData
     )
     .then(res => {
-      console.log(res);
       localStorage.setItem("token", res.data.token);
       dispatch({
         type: REGISTER_SUCCESS,
@@ -66,7 +64,7 @@ export const getUserData = () => dispatch => {
   axiosWithAuth()
     .get("https://business-cards-organizer-ls.herokuapp.com/api/user")
     .then(res => {
-      console.log(res.data);
+      console.log(res)
       dispatch({ type: FETCH_USERDATA_SUCCESS, payload: res.data });
     })
     .catch(err => {

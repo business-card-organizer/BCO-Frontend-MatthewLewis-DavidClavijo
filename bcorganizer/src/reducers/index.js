@@ -5,7 +5,8 @@ import { FETCH_USERDATA_START, FETCH_USERDATA_SUCCESS, FETCH_USERDATA_FAIL } fro
 const initialState = {
   user: [],
   isLoading: false,
-  error: ""
+  error: "",
+  isLoggedIn: false
 };
 
 function reducer(state = initialState, action) {
@@ -24,13 +25,15 @@ function reducer(state = initialState, action) {
           qr_code: action.payload.data.qrCode
         },
         isLoading: false,
-        error: ""
+        error: "",
+        isLoggedIn: true
       };
     case POST_FAIL:
       return {
         ...state,
         isLoading: false,
-        error: action.payload
+        error: action.payload,
+        isLoggedIn: false
       };
 
     /************ Reducers for Register *****************/
@@ -45,6 +48,7 @@ function reducer(state = initialState, action) {
         ...state,
         isLoading: false,
         error: "",
+        isLoggedIn: true,
         user: [...state.user, ...action.payload]
       };
     case REGISTER_FAIL:
@@ -53,7 +57,7 @@ function reducer(state = initialState, action) {
         error: action.payload
       };
 
-    /************ Reducers for Register *****************/
+    /************ Reducers for Fetch *****************/
     case FETCH_USERDATA_START:
       return {
         ...state,
@@ -61,14 +65,21 @@ function reducer(state = initialState, action) {
         error: ""
       };
     case FETCH_USERDATA_SUCCESS:
-      console.log(action.payload.firstName);
       return {
         ...state,
         user: {
           ...state.user,
           first_name: action.payload.firstName,
-          last_name: action.payload.lastName
-        }
+          last_name: action.payload.lastName,
+          id: action.payload.id,
+          email: action.payload.email,
+          organization: action.payload.organization,
+          phone: action.payload.phone,
+          jobTitle: action.payload.jobTitle,
+          qrCode: action.payload.qrCode,
+          username: action.payload.username
+        },
+        isLoggedIn: true
       };
     case FETCH_USERDATA_FAIL:
       return {
