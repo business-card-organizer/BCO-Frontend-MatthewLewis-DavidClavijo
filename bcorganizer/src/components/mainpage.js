@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route } from 'react-router-dom';
+import { PrivateRoute } from './PrivateRoute'
 
 import Register from './Register';
 import Login from "./Login";
@@ -18,7 +19,7 @@ class MainPage extends Component {
         <Route path='/' component={ButtonAppBar} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route path='/home' component={Loggedin} />
+        <PrivateRoute path='/home' component={Loggedin} />
       </div>
     );
   }
