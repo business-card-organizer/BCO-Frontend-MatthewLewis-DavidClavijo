@@ -25,6 +25,7 @@ class MyAppBar extends React.Component {
     this.props.isLoggedIn = false;
   }
 
+
   render() {
     const { classes, isLoggedIn, username } = this.props;
     console.log(this.username)
@@ -54,6 +55,7 @@ class MyAppBar extends React.Component {
           {isLoggedIn && (
             <div className={classes.root}>
               <Toolbar>
+
                 <Typography variant="h6" color="inherit" className={classes.grow}>
                   {`Welcome ${username}`}
                 </Typography>
