@@ -1,12 +1,22 @@
 import { POST_START, POST_SUCCESS, POST_FAIL } from "../actions";
 import { REGISTER_START, REGISTER_SUCCESS, REGISTER_FAIL } from "../actions";
-import { FETCH_USERDATA_START, FETCH_USERDATA_SUCCESS, FETCH_USERDATA_FAIL } from "../actions";
+import {
+  FETCH_USERDATA_START,
+  FETCH_USERDATA_SUCCESS,
+  FETCH_USERDATA_FAIL
+} from "../actions";
+import {
+  GET_COLLECTION_START,
+  GET_COLLECTION_SUCCESS,
+  GET_COLLECTION_FAIL
+} from "../actions";
 
 const initialState = {
   user: [],
   isLoading: false,
   error: "",
-  isLoggedIn: false
+  isLoggedIn: false,
+  cards: []
 };
 
 function reducer(state = initialState, action) {
@@ -86,6 +96,27 @@ function reducer(state = initialState, action) {
         ...state,
         error: action.payload
       };
+
+    /************ Reducers for Collection *****************/
+    case GET_COLLECTION_START:
+        return {
+          ...state,
+          isLoading: true,
+          error: ""
+        };
+      case GET_COLLECTION_SUCCESS:
+        return {
+          ...state,
+          cards: [ 
+            ...state.cards,
+            ...action.payload
+          ],
+        };
+      case GET_COLLECTION_FAIL:
+        return {
+          ...state,
+          error: action.payload
+        };
     default:
       return state;
   }

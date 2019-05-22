@@ -14,7 +14,8 @@ const styles = {
     flexGrow: 1
   },
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
+    justifyContent: 'flex-start'
   }
 };
 
@@ -35,13 +36,13 @@ class MyAppBar extends React.Component {
           {!isLoggedIn && (
             <div className={classes.root}>
               <Toolbar>
-                <Typography
-                  variant="h6"
+                <Button
                   color="inherit"
                   className={classes.grow}
+                  component={Link} to="/"
                 >
                   The Last Rolodex
-                </Typography>
+                </Button>
                 <Button color="inherit" component={Link} to="/login">
                   Login
                 </Button>
@@ -60,7 +61,7 @@ class MyAppBar extends React.Component {
                 <Button color="inherit" component={Link} to="/home">
                   My Profile
                 </Button>
-                <Button color="inherit" component={Link} to="/login">
+                <Button color="inherit" component={Link} to="/collection">
                   My Collection
                 </Button>
                 <Button color="inherit" component={Link} to="/login" onClick={this.logOutButton}>

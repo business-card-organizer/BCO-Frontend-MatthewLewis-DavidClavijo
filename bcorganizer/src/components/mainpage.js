@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { Route } from 'react-router-dom';
-import { PrivateRoute } from './PrivateRoute'
+import { Route } from "react-router-dom";
+import { PrivateRoute } from "./PrivateRoute";
 
-import Register from './Register';
+import Register from "./Register";
 import Login from "./Login";
-import ButtonAppBar from '../components/Appbar';
-import Loggedin from './Loggedin';
+import ButtonAppBar from "../components/Appbar";
+import Loggedin from "./Loggedin";
+import Card from "./card";
+import Landing from "./Landing";
 
 class MainPage extends Component {
   constructor(props) {
@@ -15,11 +17,13 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div className="userCard">
-        <Route path='/' component={ButtonAppBar} />
-        <Route path='/login' component={Login} />
-        <Route path='/register' component={Register} />
-        <PrivateRoute path='/home' component={Loggedin} />
+      <div className="mainpage">
+        <ButtonAppBar />
+        <Route exact path="/" component={Landing} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <PrivateRoute path="/home" component={Loggedin} />
+        <Route path="/collection" component={Card} />
       </div>
     );
   }

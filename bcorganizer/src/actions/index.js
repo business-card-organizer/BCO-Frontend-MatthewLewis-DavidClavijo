@@ -64,11 +64,31 @@ export const getUserData = () => dispatch => {
   axiosWithAuth()
     .get("https://business-cards-organizer-ls.herokuapp.com/api/user")
     .then(res => {
-      console.log(res)
+      console.log(res);
       dispatch({ type: FETCH_USERDATA_SUCCESS, payload: res.data });
     })
     .catch(err => {
       console.log(err);
       dispatch({ type: FETCH_USERDATA_FAIL, payload: err });
+    });
+};
+
+//******************** Action for Getting users collection ****************/
+
+export const GET_COLLECTION_START = "GET_COLLECTION_START";
+export const GET_COLLECTION_SUCCESS = "GET_COLLECTION_SUCCESS";
+export const GET_COLLECTION_FAIL = "GET_COLLECTION_FAIL";
+
+export const getCollectionData = () => dispatch => {
+  dispatch({ type: GET_COLLECTION_START });
+  axiosWithAuth()
+    .get("https://business-cards-organizer-ls.herokuapp.com/api/cards")
+    .then(res => {
+      console.log(res);
+      dispatch({ type: GET_COLLECTION_SUCCESS, payload: res.data });
+    })
+    .catch(err => {
+      console.log(err);
+      dispatch({ type: GET_COLLECTION_FAIL, payload: err });
     });
 };
