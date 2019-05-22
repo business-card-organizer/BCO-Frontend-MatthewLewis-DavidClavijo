@@ -14,17 +14,20 @@ class Login extends React.Component {
   };
 
   handleChanges = e => {
-    console.log(e.target.value)
     this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.submitLogin(this.state);
-    this.setState({
-      username: '',
-      password: ''
-    })
+    this.props.submitLogin(this.state)
+      .then(() => {
+        this.props.history.push('./home');
+      })
+
+    // this.setState({
+    //   username: '',
+    //   password: ''
+    // })
   };
 
   render() {
