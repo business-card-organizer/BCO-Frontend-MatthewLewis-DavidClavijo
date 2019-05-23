@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
 
+
 import Register from "./Register";
 import Login from "./Login";
 import ButtonAppBar from "../components/Appbar";
