@@ -2,26 +2,27 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 import QRCode from 'qrcode.react';
 
 import { getUserData } from "../actions";
+import EditModal from './modals/editModal'
 
 const styles = theme => ({
   card: {
     justifyContent: "center",
-    width: "85%",
+    width: "100%",
     maxWidth: '600px',
     display: "flex",
     margin: '0 auto',
-    backgroundColor: 'antiquewhite',
+    backgroundColor: 'lightgrey',
     marginTop: '30px'
 
   },
   details: {
     display: "flex",
+    flexDirection: "column"
   },
   content: {
     flex: "1 0 auto",
@@ -55,33 +56,17 @@ class Loggedin extends React.Component {
                 <Typography component="h5" variant="h5">
                   {`${firstname} ${lastname}`}
                 </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Email: ${email}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Organization: ${organization}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Phone: ${phone}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Job Title: ${jobTitle}`}
-                </Typography>
               </CardContent>
               <QRCode
                 className={classes.qrcode}
                 value={`${qrCode}`}
-                fgColor='pink'
-                bgcolor='black'
+                fgColor='black'
+                bgColor='lightgray'
                 level='L'
                 renderAs='svg'
               />
             </div>
-            {/* <CardMedia
-        className={classes.cover}
-        image="/static/images/cards/live-from-space.jpg"
-        title="Live from space album cover"
-      /> */}
+            <EditModal />
           </Card>
         </div>
         <div />

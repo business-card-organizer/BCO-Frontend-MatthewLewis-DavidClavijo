@@ -23,11 +23,6 @@ class Login extends React.Component {
       .then(() => {
         this.props.history.push('./home');
       })
-
-    // this.setState({
-    //   username: '',
-    //   password: ''
-    // })
   };
 
   render() {
@@ -47,7 +42,6 @@ class Login extends React.Component {
             name="username"
             onChange={this.handleChanges}
           />
-          {/* className={classes.textField} */}
 
           <TextField
             required
