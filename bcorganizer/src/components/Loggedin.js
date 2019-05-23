@@ -11,16 +11,17 @@ import { getUserData } from "../actions";
 const styles = theme => ({
   card: {
     justifyContent: "center",
-    width: "85%",
+    width: "100%",
     maxWidth: '600px',
     display: "flex",
     margin: '0 auto',
-    backgroundColor: 'antiquewhite',
+    backgroundColor: 'lightgrey',
     marginTop: '30px'
 
   },
   details: {
     display: "flex",
+    flexDirection: "column"
   },
   content: {
     flex: "1 0 auto",
@@ -33,7 +34,7 @@ const styles = theme => ({
     width: 151
   },
   qrcode: {
-    margin: '20px'
+    //margin: '20px'
   }
 });
 
@@ -54,7 +55,7 @@ class Loggedin extends React.Component {
                 <Typography component="h5" variant="h5">
                   {`${firstname} ${lastname}`}
                 </Typography>
-                <Typography component="h5" variant="h5">
+                {/* <Typography component="h5" variant="h5">
                   {`Email: ${email}`}
                 </Typography>
                 <Typography component="h5" variant="h5">
@@ -65,13 +66,13 @@ class Loggedin extends React.Component {
                 </Typography>
                 <Typography component="h5" variant="h5">
                   {`Job Title: ${jobTitle}`}
-                </Typography>
+                </Typography> */}
               </CardContent>
               <QRCode
                 className={classes.qrcode}
                 value={`${qrCode}`}
                 fgColor='black'
-                bgcolor='black'
+                bgColor='lightgray'
                 level='L'
                 renderAs='svg'
               />

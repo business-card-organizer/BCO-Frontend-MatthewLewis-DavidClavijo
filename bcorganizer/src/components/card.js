@@ -52,7 +52,6 @@ class SingleCard extends React.Component {
 
   componentDidMount() {
     this.props.getCollectionData();
-    console.log(this.props.cards)
   }
 
   componentDidUpdate(prevProps) {
@@ -77,7 +76,6 @@ class SingleCard extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     const { classes } = this.props;
     const { cards } = this.state;
     return (
@@ -86,7 +84,6 @@ class SingleCard extends React.Component {
           {cards &&
             cards.map(card => {
               const { firstName, lastName, email, organization, phone, jobTitle, id } = card;
-              console.log(card.id)
               return (
                 <Card className={classes.card} key={id}>
                   <div className={classes.details}>
