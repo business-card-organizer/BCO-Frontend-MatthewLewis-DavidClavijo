@@ -4,20 +4,20 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
-import QRCode from 'qrcode.react';
+import QRCode from "qrcode.react";
 
 import { getUserData } from "../actions";
+import EditPanel from "./edit/EditPanel";
 
 const styles = theme => ({
   card: {
     justifyContent: "center",
     width: "100%",
-    maxWidth: '600px',
+    maxWidth: "600px",
     display: "flex",
-    margin: '0 auto',
-    backgroundColor: 'lightgrey',
-    marginTop: '30px'
-
+    margin: "0 auto",
+    backgroundColor: "lightgrey",
+    marginTop: "30px"
   },
   details: {
     display: "flex",
@@ -25,7 +25,6 @@ const styles = theme => ({
     alignItems: 'center',
   },
   content: {
-
   },
   cover: {
     width: 151
@@ -44,7 +43,7 @@ class Loggedin extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { firstname, lastname, email, organization, phone, jobTitle, qrCode } = this.props;
+    const { firstname, lastname, qrCode } = this.props;
     return (
       <div>
         <div>
@@ -53,29 +52,17 @@ class Loggedin extends React.Component {
               <CardContent className={classes.content}>
                 <Typography component="h5" variant="h5">
                   {`${firstname} ${lastname}`}
-                </Typography>
+                </Typography>{" "}
                 <QRCode
                   className={classes.qrcode}
                   value={`${qrCode}`}
-                  fgColor='black'
-                  bgColor='lightgray'
-                  level='L'
-                  renderAs='svg'
+                  fgColor="black"
+                  bgColor="lightgray"
+                  level="L"
+                  renderAs="svg"
                 />
-                <Typography component="h5" variant="h5">
-                  {`Email: ${email}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Organization: ${organization}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Phone: ${phone}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Job Title: ${jobTitle}`}
-                </Typography>
+                <EditPanel />
               </CardContent>
-
             </div>
           </Card>
         </div>

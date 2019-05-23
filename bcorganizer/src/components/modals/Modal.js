@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
-import QRScanner from './QRScanner';
+import QRScanner from '../QRScanner';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;

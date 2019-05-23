@@ -28,7 +28,7 @@ class MyAppBar extends React.Component {
   handleLogout = () => {
     this.props.userLogout();
   }
-
+  
   render() {
     const { classes, isLoggedIn, username } = this.props;
 
