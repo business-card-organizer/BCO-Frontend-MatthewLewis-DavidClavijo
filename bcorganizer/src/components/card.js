@@ -41,7 +41,6 @@ class SingleCard extends React.Component {
   }
 
   render() {
-    console.log(this.props.cards);
     const { classes } = this.props;
     const { cards } = this.props;
     return (

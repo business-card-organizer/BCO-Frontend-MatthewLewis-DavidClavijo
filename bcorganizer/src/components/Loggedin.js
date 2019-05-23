@@ -2,7 +2,6 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 import QRCode from 'qrcode.react';
@@ -77,11 +76,6 @@ class Loggedin extends React.Component {
                 renderAs='svg'
               />
             </div>
-            {/* <CardMedia
-        className={classes.cover}
-        image="/static/images/cards/live-from-space.jpg"
-        title="Live from space album cover"
-      /> */}
           </Card>
         </div>
         <div />

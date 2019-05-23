@@ -3,12 +3,12 @@ import { axiosWithAuth } from "../components/authentification/axiosWithAuth";
 
 //********************Action for Login ****************/
 
-export const POST_START = "POST_START";
-export const POST_SUCCESS = "POST_SUCCESS";
-export const POST_FAIL = "POST_FAIL";
+export const LOG_START = "LOG_START";
+export const LOG_SUCCESS = "LOG_SUCCESS";
+export const LOG_FAIL = "LOG_FAIL";
 
 export const submitLogin = loginData => dispatch => {
-  dispatch({ type: POST_START });
+  dispatch({ type: LOG_START });
   return axios
     .post(
       "https://business-cards-organizer-ls.herokuapp.com/api/auth/login",
@@ -17,11 +17,16 @@ export const submitLogin = loginData => dispatch => {
     .then(res => {
       localStorage.setItem("token", res.data.token);
       dispatch({
-        type: POST_START,
+        type: LOG_SUCCESS,
         payload: res.data
       });
     })
-    .catch(err => console.log(err.status));
+    .catch(err => {
+      dispatch({
+        type: LOG_FAIL,
+        payload: err.status
+      });
+    });
 };
 
 //******************** Action for Register ****************/
@@ -53,6 +58,14 @@ export const submitRegister = registerData => dispatch => {
     });
 };
 
+//******************** Action for Log Out ****************/
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+
+export const userLogout = () => dispatch => {
+  dispatch({ type: LOGOUT_SUCCESS });
+  localStorage.removeItem("token");
+};
+
 //******************** Action for Getting User Data ****************/
 
 export const FETCH_USERDATA_START = "FETCH_USERDATA_START";
@@ -64,7 +77,7 @@ export const getUserData = () => dispatch => {
   axiosWithAuth()
     .get("https://business-cards-organizer-ls.herokuapp.com/api/user")
     .then(res => {
-      console.log(res);
+      //console.log(res);
       dispatch({ type: FETCH_USERDATA_SUCCESS, payload: res.data });
     })
     .catch(err => {

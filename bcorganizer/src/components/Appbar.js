@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
+import { getUserData, userLogout } from "../actions";
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 
@@ -20,16 +21,18 @@ const styles = {
 };
 
 class MyAppBar extends React.Component {
-
-  logOutButton = e => {
-    localStorage.removeItem('token');
-    this.props.isLoggedIn = false;
+  componentDidMount() {
+    this.props.getUserData();
   }
 
+  handleLogout = () => {
+    this.props.userLogout();
+  }
 
   render() {
     const { classes, isLoggedIn, username } = this.props;
-    console.log(this.username)
+    console.log( isLoggedIn )
+
 
     return (
       <div>
@@ -66,7 +69,7 @@ class MyAppBar extends React.Component {
                 <Button color="inherit" component={Link} to="/collection">
                   My Collection
                 </Button>
-                <Button color="inherit" component={Link} to="/login" onClick={this.logOutButton}>
+                <Button color="inherit" component={Link} to="/login" onClick={this.handleLogout}>
                   Log Out
                 </Button>
               </Toolbar>
@@ -81,8 +84,8 @@ class MyAppBar extends React.Component {
 const mapStateToProps = state => {
   return {
     isLoggedIn: state.isLoggedIn,
-    username: state.user.username
+    username: state.user.username,
   }
 }
 
-export default connect(mapStateToProps, {})(withStyles(styles)(MyAppBar));
+export default connect(mapStateToProps, { getUserData, userLogout })(withStyles(styles)(MyAppBar));
