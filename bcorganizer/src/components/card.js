@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 
 import { getCollectionData } from "../actions";
+import Modal from './Modal';
 
 const styles = theme => ({
   card: {
@@ -30,8 +31,8 @@ const styles = theme => ({
   cover: {
     width: 151
   },
-  qrcode: {
-    margin: "20px"
+  qrscanner: {
+    margin: '0 auto'
   }
 });
 
@@ -49,7 +50,7 @@ class SingleCard extends React.Component {
         <div>
           {cards &&
             cards.map(card => {
-              const { firstName, lastName, email, organization, phone, jobTitle, id} = card;
+              const { firstName, lastName, email, organization, phone, jobTitle, id } = card;
               return (
                 <Card className={classes.card} key={id}>
                   <div className={classes.details}>
@@ -76,6 +77,7 @@ class SingleCard extends React.Component {
             })}
         </div>
         <div />
+        <Modal className={classes.qrscanner}/>
       </div>
     );
   }

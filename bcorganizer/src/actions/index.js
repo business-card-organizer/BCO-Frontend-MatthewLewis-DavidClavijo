@@ -92,3 +92,20 @@ export const getCollectionData = () => dispatch => {
       dispatch({ type: GET_COLLECTION_FAIL, payload: err });
     });
 };
+
+//******************** Action for Getting QrCode Cards ****************/
+
+export const POST_QRCODE_START = "POST_QRCODE_START";
+export const POST_QRCODE_SUCCESS = "POST_QRCODE_SUCCESS";
+export const POST_QRCODE_FAIL = "POST_QRCODE_FAIL";
+
+export const postQrcode = qrcode => dispatch => {
+  dispatch({ type: POST_QRCODE_START });
+  axiosWithAuth().post('https://business-cards-organizer-ls.herokuapp.com/api/cards/qr', qrcode)
+    .then(res => {
+      console.log(res)
+    })
+    .catch(error => {
+      console.log(error.message)
+    })
+}

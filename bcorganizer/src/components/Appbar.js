@@ -29,7 +29,6 @@ class MyAppBar extends React.Component {
 
   render() {
     const { classes, isLoggedIn, username } = this.props;
-    console.log(this.username)
 
     return (
       <div>

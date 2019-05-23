@@ -99,24 +99,26 @@ function reducer(state = initialState, action) {
 
     /************ Reducers for Collection *****************/
     case GET_COLLECTION_START:
-        return {
-          ...state,
-          isLoading: true,
-          error: ""
-        };
-      case GET_COLLECTION_SUCCESS:
-        return {
-          ...state,
-          cards: [ 
-            ...state.cards,
-            ...action.payload
-          ],
-        };
-      case GET_COLLECTION_FAIL:
-        return {
-          ...state,
-          error: action.payload
-        };
+      return {
+        ...state,
+        isLoading: true,
+        error: ""
+      };
+    case GET_COLLECTION_SUCCESS:
+      return {
+        ...state,
+        cards: [
+          ...state.cards,
+          ...action.payload
+        ],
+      };
+    case GET_COLLECTION_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      };
+    /************ Reducers for QRcodes *****************/
+
     default:
       return state;
   }
