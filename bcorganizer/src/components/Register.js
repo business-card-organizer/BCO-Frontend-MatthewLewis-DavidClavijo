@@ -43,7 +43,7 @@ class Register extends React.Component {
           <TextField
             required
             id="outlined-firstname-input"
-            label="Firstname"
+            label="First Name"
             margin="normal"
             variant="outlined"
             value={this.state.firstName}
@@ -54,7 +54,7 @@ class Register extends React.Component {
           <TextField
             required
             id="outlined-lastname-input"
-            label="Lastname"
+            label="Last Name"
             margin="normal"
             variant="outlined"
             value={this.state.lastName}

@@ -9,6 +9,7 @@ import QRCode from "qrcode.react";
 import { getUserData } from "../actions";
 import EditPanel from "./edit/EditPanel";
 
+
 const styles = theme => ({
   card: {
     justifyContent: "center",
@@ -21,20 +22,18 @@ const styles = theme => ({
   },
   details: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    alignItems: 'center',
   },
   content: {
-    flex: "1 0 auto",
-    display: "flex",
-    flexDirection: "column",
-    width: "50%",
-    justifyContent: "space-between"
   },
   cover: {
     width: 151
   },
   qrcode: {
-    margin: "20px"
+    marginTop: '20px',
+    marginBottom: '20px'
+
   }
 });
 
