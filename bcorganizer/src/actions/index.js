@@ -64,7 +64,6 @@ export const getUserData = () => dispatch => {
   axiosWithAuth()
     .get("https://business-cards-organizer-ls.herokuapp.com/api/user")
     .then(res => {
-      console.log(res);
       dispatch({ type: FETCH_USERDATA_SUCCESS, payload: res.data });
     })
     .catch(err => {
@@ -84,7 +83,6 @@ export const getCollectionData = () => dispatch => {
   axiosWithAuth()
     .get("https://business-cards-organizer-ls.herokuapp.com/api/cards")
     .then(res => {
-      console.log(res);
       dispatch({ type: GET_COLLECTION_SUCCESS, payload: res.data });
     })
     .catch(err => {
@@ -103,7 +101,6 @@ export const postQrcode = qrcode => dispatch => {
   dispatch({ type: POST_QRCODE_START });
   axiosWithAuth().post('https://business-cards-organizer-ls.herokuapp.com/api/cards/qr', qrcode)
     .then(res => {
-      console.log(res)
       dispatch({
         type: POST_QRCODE_SUCCESS,
         payload: res.data
@@ -115,5 +112,30 @@ export const postQrcode = qrcode => dispatch => {
         type: POST_QRCODE_FAIL,
         payload: error.message
       })
+    })
+}
+
+//******************** Action for DELETING QrCode Cards ****************/
+
+export const DELETE_QRCODE_START = "DELETE_QRCODE_START";
+export const DELETE_QRCODE_SUCCESS = "DELETE_QRCODE_SUCCESS";
+export const DELETE_QRCODE_FAIL = "DELETE_QRCODE_FAIL";
+
+export const deleteRequest = deleteId => dispatch => {
+  dispatch({ type: DELETE_QRCODE_START });
+  axiosWithAuth().delete(`https://business-cards-organizer-ls.herokuapp.com/api/cards/${deleteId}`)
+    .then(res => {
+      console.log(res)
+      dispatch({
+        type: DELETE_QRCODE_SUCCESS,
+        payload: 'card deleted'
+      })
+    })
+    .catch(error => {
+      console.log(error.message)
+      // dispatch({
+      //   type: DELETE_QRCODE_FAIL,
+      //   payload: error.message
+      // })
     })
 }

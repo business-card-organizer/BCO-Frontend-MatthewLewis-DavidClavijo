@@ -5,12 +5,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 
-import { getCollectionData } from "../actions";
+import { getCollectionData, deleteRequest } from "../actions";
 import Modal from './Modal';
 
 const styles = theme => ({
   card: {
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     width: "85%",
     maxWidth: "600px",
     display: "flex",
@@ -33,24 +33,60 @@ const styles = theme => ({
   },
   qrscanner: {
     margin: '0 auto'
+  },
+  button: {
+    color: 'white',
+    backgroundColor: '#3f51b5',
+    fontSize: 'larger',
+    width: "22%",
+    height: '3rem',
+    alignSelf: 'center',
+    borderRadius: '5px'
   }
 });
 
 class SingleCard extends React.Component {
+  state = {
+    cards: []
+  }
+
   componentDidMount() {
     this.props.getCollectionData();
+    console.log(this.props.cards)
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.cards !== this.props.cards) {
+      this.setState({
+        cards: this.props.cards
+      });
+    }
+  }
+
+  handleClick = (cardId) => {
+    // event.preventDefault();
+    let cards = this.state.cards.filter(card => {
+      return card && card.id !== cardId
+    });
+    console.log(cards)
+    this.setState({
+      cards: cards
+    })
+    this.props.deleteRequest(cardId);
+
   }
 
   render() {
-    console.log(this.props.cards);
+    console.log(this.state);
     const { classes } = this.props;
-    const { cards } = this.props;
+    const { cards } = this.state;
     return (
       <div>
         <div>
           {cards &&
             cards.map(card => {
               const { firstName, lastName, email, organization, phone, jobTitle, id } = card;
+              console.log(card.id)
               return (
                 <Card className={classes.card} key={id}>
                   <div className={classes.details}>
@@ -72,12 +108,13 @@ class SingleCard extends React.Component {
                       </Typography>
                     </CardContent>
                   </div>
+                  <button onClick={() => this.handleClick(card.id)} className={classes.button}>Delete</button>
                 </Card>
               );
             })}
         </div>
         <div />
-        <Modal className={classes.qrscanner}/>
+        <Modal className={classes.qrscanner} />
       </div>
     );
   }
@@ -91,5 +128,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getCollectionData }
+  { getCollectionData, deleteRequest }
 )(withStyles(styles)(SingleCard));

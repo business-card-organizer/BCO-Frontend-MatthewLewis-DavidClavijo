@@ -15,6 +15,11 @@ import {
   POST_QRCODE_SUCCESS,
   POST_QRCODE_FAIL
 } from "../actions";
+import {
+  DELETE_QRCODE_START,
+  DELETE_QRCODE_SUCCESS,
+  DELETE_QRCODE_FAIL
+} from '../actions';
 
 const initialState = {
   user: [],
@@ -140,6 +145,24 @@ function reducer(state = initialState, action) {
         ...state,
         error: action.payload
       }
+
+      /************ Reducers for QRcodes *****************/
+    case DELETE_QRCODE_START:
+        return {
+          ...state,
+          error: '',
+          isLoading: true
+        }
+      case DELETE_QRCODE_SUCCESS:
+        return {
+          ...state,
+          isLoading: false
+        }
+      case DELETE_QRCODE_FAIL:
+        return {
+          ...state,
+          error: action.payload
+        }
     default:
       return state;
   }
