@@ -10,6 +10,11 @@ import {
   GET_COLLECTION_SUCCESS,
   GET_COLLECTION_FAIL
 } from "../actions";
+import {
+  POST_QRCODE_START,
+  POST_QRCODE_SUCCESS,
+  POST_QRCODE_FAIL
+} from "../actions";
 
 const initialState = {
   user: [],
@@ -118,7 +123,23 @@ function reducer(state = initialState, action) {
         error: action.payload
       };
     /************ Reducers for QRcodes *****************/
-
+    case POST_QRCODE_START:
+      return {
+        ...state,
+        error: '',
+        isLoading: true
+      }
+    case POST_QRCODE_SUCCESS:
+      return {
+        ...state,
+        cards: [...state.cards, action.payload],
+        isLoading: false
+      }
+    case POST_QRCODE_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      }
     default:
       return state;
   }

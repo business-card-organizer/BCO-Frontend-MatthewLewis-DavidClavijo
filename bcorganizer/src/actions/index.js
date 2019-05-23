@@ -104,8 +104,16 @@ export const postQrcode = qrcode => dispatch => {
   axiosWithAuth().post('https://business-cards-organizer-ls.herokuapp.com/api/cards/qr', qrcode)
     .then(res => {
       console.log(res)
+      dispatch({
+        type: POST_QRCODE_SUCCESS,
+        payload: res.data
+      })
     })
     .catch(error => {
       console.log(error.message)
+      dispatch({
+        type: POST_QRCODE_FAIL,
+        payload: error.message
+      })
     })
 }

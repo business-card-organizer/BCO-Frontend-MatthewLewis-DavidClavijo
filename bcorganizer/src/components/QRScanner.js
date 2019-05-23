@@ -5,15 +5,16 @@ import { connect } from 'react-redux';
 
 class Scanner extends Component {
   state = {
-    result: 'No result'
+    "qrCode": 'No result'
   }
 
   handleScan = data => {
     if (data) {
-      this.props.postQrcode(this.state.result);
       this.setState({
-        result: data
+        qrCode: data
       })
+      console.log(this.state)
+      this.props.postQrcode(this.state);
     }
   }
 
@@ -30,7 +31,7 @@ class Scanner extends Component {
           onScan={this.handleScan}
           style={{ width: '100%' }}
         />
-        <p>{this.state.result}</p>
+        <p>{this.state.qrCode}</p>
       </div>
     )
   }
