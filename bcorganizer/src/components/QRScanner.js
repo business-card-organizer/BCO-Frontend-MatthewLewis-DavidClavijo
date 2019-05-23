@@ -1,21 +1,27 @@
-import React, { Component } from 'react'
-import QrReader from 'react-qr-reader'
- 
+import React, { Component } from 'react';
+import QrReader from 'react-qr-reader';
+import { postQrcode } from '../actions';
+import { connect } from 'react-redux';
+
 class Scanner extends Component {
   state = {
-    result: 'No result'
+    "qrCode": 'No result'
   }
- 
+
   handleScan = data => {
     if (data) {
       this.setState({
-        result: data
+        qrCode: data
       })
+      console.log(this.state)
+      this.props.postQrcode(this.state);
     }
   }
+
   handleError = err => {
     console.error(err)
   }
+
   render() {
     return (
       <div>
@@ -23,12 +29,12 @@ class Scanner extends Component {
           delay={300}
           onError={this.handleError}
           onScan={this.handleScan}
-          style={{ width: '50%' }}
+          style={{ width: '100%' }}
         />
-        <p>{this.state.result}</p>
+        <p>{this.state.qrCode}</p>
       </div>
     )
   }
 }
 
-export default Scanner;
+export default connect(null, { postQrcode })(Scanner);

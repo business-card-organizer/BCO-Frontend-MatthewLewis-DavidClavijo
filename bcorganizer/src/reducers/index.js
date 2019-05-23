@@ -1,7 +1,25 @@
 import { LOG_START, LOG_SUCCESS, LOG_FAIL, LOGOUT_SUCCESS } from "../actions";
 import { REGISTER_START, REGISTER_SUCCESS, REGISTER_FAIL } from "../actions";
-import { FETCH_USERDATA_START, FETCH_USERDATA_SUCCESS, FETCH_USERDATA_FAIL } from "../actions";
-import { GET_COLLECTION_START, GET_COLLECTION_SUCCESS, GET_COLLECTION_FAIL } from "../actions";
+import {
+  FETCH_USERDATA_START,
+  FETCH_USERDATA_SUCCESS,
+  FETCH_USERDATA_FAIL
+} from "../actions";
+import {
+  GET_COLLECTION_START,
+  GET_COLLECTION_SUCCESS,
+  GET_COLLECTION_FAIL
+} from "../actions";
+import {
+  POST_QRCODE_START,
+  POST_QRCODE_SUCCESS,
+  POST_QRCODE_FAIL
+} from "../actions";
+import {
+  DELETE_QRCODE_START,
+  DELETE_QRCODE_SUCCESS,
+  DELETE_QRCODE_FAIL
+} from '../actions';
 
 const initialState = {
   user: [],
@@ -104,13 +122,52 @@ function reducer(state = initialState, action) {
     case GET_COLLECTION_SUCCESS:
       return {
         ...state,
-        cards: [...state.cards, ...action.payload]
+        cards: [
+          ...state.cards,
+          ...action.payload
+        ],
       };
     case GET_COLLECTION_FAIL:
       return {
         ...state,
         error: action.payload
       };
+    /************ Reducers for QRcodes *****************/
+    case POST_QRCODE_START:
+      return {
+        ...state,
+        error: '',
+        isLoading: true
+      }
+    case POST_QRCODE_SUCCESS:
+      return {
+        ...state,
+        cards: [...state.cards, action.payload],
+        isLoading: false
+      }
+    case POST_QRCODE_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      }
+
+      /************ Reducers for QRcodes *****************/
+    case DELETE_QRCODE_START:
+        return {
+          ...state,
+          error: '',
+          isLoading: true
+        }
+      case DELETE_QRCODE_SUCCESS:
+        return {
+          ...state,
+          isLoading: false
+        }
+      case DELETE_QRCODE_FAIL:
+        return {
+          ...state,
+          error: action.payload
+        }
     default:
       return state;
   }
