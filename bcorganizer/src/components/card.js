@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 
 import { getCollectionData, deleteRequest } from "../actions";
-import Modal from './Modal';
+import Modal from './modals/Modal';
 
 const styles = theme => ({
   card: {

@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import QRCode from 'qrcode.react';
 
 import { getUserData } from "../actions";
+import EditModal from './modals/editModal'
 
 const styles = theme => ({
   card: {
@@ -34,7 +35,7 @@ const styles = theme => ({
     width: 151
   },
   qrcode: {
-    //margin: '20px'
+    margin: '20px'
   }
 });
 
@@ -55,18 +56,6 @@ class Loggedin extends React.Component {
                 <Typography component="h5" variant="h5">
                   {`${firstname} ${lastname}`}
                 </Typography>
-                {/* <Typography component="h5" variant="h5">
-                  {`Email: ${email}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Organization: ${organization}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Phone: ${phone}`}
-                </Typography>
-                <Typography component="h5" variant="h5">
-                  {`Job Title: ${jobTitle}`}
-                </Typography> */}
               </CardContent>
               <QRCode
                 className={classes.qrcode}
@@ -77,6 +66,7 @@ class Loggedin extends React.Component {
                 renderAs='svg'
               />
             </div>
+            <EditModal />
           </Card>
         </div>
         <div />
