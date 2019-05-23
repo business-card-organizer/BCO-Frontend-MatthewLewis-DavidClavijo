@@ -31,7 +31,6 @@ const styles = theme => ({
   cover: {
     width: '151'
   },
-
   button: {
     color: 'white',
     backgroundColor: '#3f51b5',
@@ -111,6 +110,7 @@ class SingleCard extends React.Component {
             })}
         </div>
         <div />
+        <Modal className={classes.qrscanner} />
       </div>
     );
   }

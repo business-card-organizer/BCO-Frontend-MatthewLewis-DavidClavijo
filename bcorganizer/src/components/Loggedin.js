@@ -9,6 +9,7 @@ import QRCode from "qrcode.react";
 import { getUserData } from "../actions";
 import EditPanel from "./edit/EditPanel";
 
+
 const styles = theme => ({
   card: {
     justifyContent: "center",
