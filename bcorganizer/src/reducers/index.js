@@ -123,7 +123,6 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         cards: [
-          ...state.cards,
           ...action.payload
         ],
       };
@@ -151,23 +150,24 @@ function reducer(state = initialState, action) {
         error: action.payload
       }
 
-      /************ Reducers for QRcodes *****************/
+    /************ Reducers for QRcodes *****************/
     case DELETE_QRCODE_START:
-        return {
-          ...state,
-          error: '',
-          isLoading: true
-        }
-      case DELETE_QRCODE_SUCCESS:
-        return {
-          ...state,
-          isLoading: false
-        }
-      case DELETE_QRCODE_FAIL:
-        return {
-          ...state,
-          error: action.payload
-        }
+      return {
+        ...state,
+        error: '',
+        isLoading: true
+      }
+    case DELETE_QRCODE_SUCCESS:
+      return {
+        ...state,
+        isLoading: false
+      }
+    case DELETE_QRCODE_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      }
+
     default:
       return state;
   }
