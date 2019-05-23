@@ -21,20 +21,19 @@ const styles = theme => ({
   },
   details: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    alignItems: 'center',
   },
   content: {
-    flex: "1 0 auto",
-    display: 'flex',
-    flexDirection: 'column',
-    width: '50%',
-    justifyContent: 'space-between'
+
   },
   cover: {
     width: 151
   },
   qrcode: {
-    //margin: '20px'
+    marginTop: '20px',
+    marginBottom: '20px'
+
   }
 });
 
@@ -55,7 +54,15 @@ class Loggedin extends React.Component {
                 <Typography component="h5" variant="h5">
                   {`${firstname} ${lastname}`}
                 </Typography>
-                {/* <Typography component="h5" variant="h5">
+                <QRCode
+                  className={classes.qrcode}
+                  value={`${qrCode}`}
+                  fgColor='black'
+                  bgColor='lightgray'
+                  level='L'
+                  renderAs='svg'
+                />
+                <Typography component="h5" variant="h5">
                   {`Email: ${email}`}
                 </Typography>
                 <Typography component="h5" variant="h5">
@@ -66,16 +73,9 @@ class Loggedin extends React.Component {
                 </Typography>
                 <Typography component="h5" variant="h5">
                   {`Job Title: ${jobTitle}`}
-                </Typography> */}
+                </Typography>
               </CardContent>
-              <QRCode
-                className={classes.qrcode}
-                value={`${qrCode}`}
-                fgColor='black'
-                bgColor='lightgray'
-                level='L'
-                renderAs='svg'
-              />
+
             </div>
           </Card>
         </div>

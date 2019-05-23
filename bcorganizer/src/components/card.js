@@ -11,7 +11,7 @@ import Modal from './Modal';
 const styles = theme => ({
   card: {
     justifyContent: "space-evenly",
-    width: "85%",
+    width: "100%",
     maxWidth: "600px",
     display: "flex",
     margin: "0 auto",
@@ -29,11 +29,9 @@ const styles = theme => ({
     justifyContent: "space-between"
   },
   cover: {
-    width: 151
+    width: '151'
   },
-  qrscanner: {
-    margin: '0 auto'
-  },
+
   button: {
     color: 'white',
     backgroundColor: '#3f51b5',
@@ -52,6 +50,7 @@ class SingleCard extends React.Component {
 
   componentDidMount() {
     this.props.getCollectionData();
+    this.setState({ cards: this.props.cards })
   }
 
   componentDidUpdate(prevProps) {
@@ -80,6 +79,7 @@ class SingleCard extends React.Component {
     const { cards } = this.state;
     return (
       <div>
+        <Modal className='qrScanner' />
         <div>
           {cards &&
             cards.map(card => {
@@ -111,7 +111,6 @@ class SingleCard extends React.Component {
             })}
         </div>
         <div />
-        <Modal className={classes.qrscanner} />
       </div>
     );
   }
