@@ -71,7 +71,7 @@ class Loggedin extends React.Component {
               <QRCode
                 className={classes.qrcode}
                 value={`${qrCode}`}
-                fgColor='pink'
+                fgColor='black'
                 bgcolor='black'
                 level='L'
                 renderAs='svg'
