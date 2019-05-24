@@ -31,7 +31,7 @@ class Scanner extends Component {
           onScan={this.handleScan}
           style={{ width: '100%', borderRadius: '5rem'}}
         />
-        {/* <p>{this.state.qrCode}</p> */}
+        <p>{this.state.qrCode}</p>
       </div>
     )
   }
