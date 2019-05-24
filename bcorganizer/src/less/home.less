@@ -1,0 +1,49 @@
+.mainpage > div:nth-child(2)
+{
+  // background-color: black;
+  // display: none;
+  height: 100%;
+  div:nth-child(1){
+      height: 100%;
+      // width: 100%;
+      background: none;
+      display: flex;
+      flex-wrap: wrap;
+      
+      // flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+    }
+    
+    div[class^='Loggedin-card'] {
+      padding: 0;
+      margin: 0;
+      max-width: unset;
+      // width: 100%;
+      // height: 100%;
+      
+    }
+
+    div[class^="MuiFormControl"] {
+      flex-wrap: nowrap;
+    }
+}
+
+div[class^='MuiCardContent'] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // text-align: center;
+}
+
+div[class^='Loggedin-qrcode-76'] {
+  order: 1;
+  // align-self: flex-end
+  // flex-grow: 1;
+}
+
+
+div[class^='EditPanel'] {
+  order: 2;
+  padding: 0% 15% 0% 15%;
+}
