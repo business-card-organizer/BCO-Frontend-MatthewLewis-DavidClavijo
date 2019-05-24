@@ -11,34 +11,36 @@ import Modal from './modals/Modal';
 const styles = theme => ({
   card: {
     justifyContent: "space-evenly",
-    width: "100%",
-    maxWidth: "600px",
+    width: "98%",
+    maxWidth: "450px",
     display: "flex",
+    flexDirection: "column",
     margin: "0 auto",
     backgroundColor: "antiquewhite",
+    border: '.1rem solid black',
     marginTop: "30px"
   },
   details: {
-    display: "flex"
+    display: "flex",
+    //justifyContent: 'center'
   },
   content: {
     flex: "1 0 auto",
     display: "flex",
     flexDirection: "column",
-    width: "50%",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   cover: {
     width: '151'
   },
   button: {
     color: 'white',
-    backgroundColor: '#3f51b5',
     fontSize: 'larger',
-    width: "22%",
+    width: "100%",
     height: '3rem',
     alignSelf: 'center',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    backgroundColor: '#283f5f'
   }
 });
 
@@ -78,7 +80,7 @@ class SingleCard extends React.Component {
     const { cards } = this.state;
     return (
       <div>
-        <Modal className='qrScanner' />
+        <Modal />
         <div>
           {cards &&
             cards.map(card => {
@@ -109,8 +111,6 @@ class SingleCard extends React.Component {
               );
             })}
         </div>
-        <div />
-        <Modal className={classes.qrscanner} />
       </div>
     );
   }
