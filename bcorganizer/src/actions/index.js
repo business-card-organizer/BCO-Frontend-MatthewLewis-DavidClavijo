@@ -43,6 +43,7 @@ export const submitRegister = registerData => dispatch => {
       registerData
     )
     .then(res => {
+      console.log(res)
       localStorage.setItem("token", res.data.token);
       dispatch({
         type: REGISTER_SUCCESS,
