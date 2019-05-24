@@ -43,16 +43,16 @@ class EditPanel extends React.Component {
             </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.ExpansionPanelDetails}>
-            <Typography component="p" variant="p">
+            <Typography component="p">
               {`Email: ${email}`}
             </Typography>
-            <Typography component="p" variant="p">
+            <Typography component="p">
               {`Organization: ${organization}`}
             </Typography>
-            <Typography component="p" variant="p">
+            <Typography component="p">
               {`Phone: ${phone}`}
             </Typography>
-            <Typography component="p" variant="p">
+            <Typography component="p">
               {`Job Title: ${jobTitle}`}
             </Typography>
           </ExpansionPanelDetails>
