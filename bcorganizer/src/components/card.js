@@ -11,7 +11,7 @@ import Modal from './modals/Modal';
 const styles = theme => ({
   card: {
     justifyContent: "space-evenly",
-    width: "100%",
+    width: "98%",
     maxWidth: "450px",
     display: "flex",
     flexDirection: "column",
@@ -22,25 +22,25 @@ const styles = theme => ({
   },
   details: {
     display: "flex",
-    justifyContent: 'center'
+    //justifyContent: 'center'
   },
   content: {
     flex: "1 0 auto",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   cover: {
     width: '151'
   },
   button: {
     color: 'white',
-    backgroundColor: '#3f51b5',
     fontSize: 'larger',
     width: "100%",
     height: '3rem',
     alignSelf: 'center',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    backgroundColor: '#283f5f'
   }
 });
 

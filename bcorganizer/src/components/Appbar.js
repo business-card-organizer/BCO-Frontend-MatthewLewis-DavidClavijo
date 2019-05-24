@@ -5,18 +5,19 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { getUserData, userLogout } from "../actions";
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = {
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    backgroundColor: '#283f5f'
   },
   grow: {
     flexGrow: 1,
-    justifyContent: 'flex-start'
+    justifyContent: "flex-start"
   }
 };
 
@@ -27,8 +28,8 @@ class MyAppBar extends React.Component {
 
   handleLogout = () => {
     this.props.userLogout();
-  }
-  
+  };
+
   render() {
     const { classes, isLoggedIn, username } = this.props;
 
@@ -41,7 +42,8 @@ class MyAppBar extends React.Component {
                 <Button
                   color="inherit"
                   className={classes.grow}
-                  component={Link} to="/"
+                  component={Link}
+                  to="/"
                 >
                   The Last Rolodex
                 </Button>
@@ -57,8 +59,11 @@ class MyAppBar extends React.Component {
           {isLoggedIn && (
             <div className={classes.root}>
               <Toolbar>
-
-                <Typography variant="h6" color="inherit" className={classes.grow}>
+                <Typography
+                  variant="h6"
+                  color="inherit"
+                  className={classes.grow}
+                >
                   {`Welcome ${username}`}
                 </Typography>
                 <Button color="inherit" component={Link} to="/home">
@@ -67,7 +72,12 @@ class MyAppBar extends React.Component {
                 <Button color="inherit" component={Link} to="/collection">
                   My Collection
                 </Button>
-                <Button color="inherit" component={Link} to="/login" onClick={this.handleLogout}>
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to="/login"
+                  onClick={this.handleLogout}
+                >
                   Log Out
                 </Button>
               </Toolbar>
@@ -82,8 +92,11 @@ class MyAppBar extends React.Component {
 const mapStateToProps = state => {
   return {
     isLoggedIn: state.isLoggedIn,
-    username: state.user.username,
-  }
-}
+    username: state.user.username
+  };
+};
 
-export default connect(mapStateToProps, { getUserData, userLogout })(withStyles(styles)(MyAppBar));
+export default connect(
+  mapStateToProps,
+  { getUserData, userLogout }
+)(withStyles(styles)(MyAppBar));

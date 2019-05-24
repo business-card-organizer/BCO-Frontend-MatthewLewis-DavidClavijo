@@ -31,9 +31,11 @@ const styles = theme => ({
     borderRadius: '5rem',
   },
   Button: {
-    backgroundColor: 'antiquewhite',
+    backgroundColor: '#283f5f',
     border: '.1rem solid black',
-    width: '100%'
+    width: '100%',
+    margin: '.5rem 0rem',
+    color: 'white'
   }
 });
 
