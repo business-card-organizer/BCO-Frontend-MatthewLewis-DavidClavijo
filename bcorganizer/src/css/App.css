@@ -153,6 +153,9 @@ table {
 header {
   position: fixed !important;
 }
+header {
+  background-color: #283F5F !important;
+}
 .mainpage > div:nth-child(2) {
   height: 100%;
 }
@@ -164,27 +167,25 @@ header {
   align-content: center;
   justify-content: space-evenly;
 }
-.mainpage > div:nth-child(2) .Loggedin-card-72 {
+.mainpage > div:nth-child(2) div[class^='Loggedin-card'] {
   padding: 0;
   margin: 0;
   max-width: unset;
 }
-.MuiCardContent-root-78 {
+.mainpage > div:nth-child(2) div[class^="MuiFormControl"] {
+  flex-wrap: nowrap;
+}
+div[class^='MuiCardContent'] {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.Loggedin-qrcode-76 {
+div[class^='Loggedin-qrcode-76'] {
   order: 1;
 }
-.EditPanel-root-115 {
+div[class^='EditPanel'] {
   order: 2;
-}
-.EditPanel-root-115 {
   padding: 0% 15% 0% 15%;
-}
-header {
-  background-color: #283F5F !important;
 }
 h1,
 h2,
