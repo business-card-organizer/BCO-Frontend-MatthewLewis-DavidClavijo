@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
-import QRScanner from '../QRScanner';
+import Scanner from '../QRScanner';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -23,12 +23,18 @@ function getModalStyle() {
 const styles = theme => ({
   paper: {
     position: 'absolute',
-    width: theme.spacing.unit * 50,
+    width: '80%',
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
     outline: 'none',
+    borderRadius: '5rem',
   },
+  Button: {
+    backgroundColor: 'antiquewhite',
+    border: '.1rem solid black',
+    width: '100%'
+  }
 });
 
 class SimpleModal extends React.Component {
@@ -49,7 +55,7 @@ class SimpleModal extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.handleOpen}>Scan a Card!</Button>
+        <Button onClick={this.handleOpen} className={classes.Button}>Scan a Card!</Button>
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -57,10 +63,10 @@ class SimpleModal extends React.Component {
           onClose={this.handleClose}
         >
           <div style={getModalStyle()} className={classes.paper}>
-            <Typography variant="h6" id="modal-title">
+            <Typography variant="h6" id="modal-title" styles={{ margin: '0 auto'}}>
               Scan a New Contact Here!
             </Typography>
-            <QRScanner />
+            <Scanner/>
           </div>
         </Modal>
       </div>

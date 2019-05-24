@@ -12,20 +12,22 @@ const styles = theme => ({
   card: {
     justifyContent: "space-evenly",
     width: "100%",
-    maxWidth: "600px",
+    maxWidth: "450px",
     display: "flex",
+    flexDirection: "column",
     margin: "0 auto",
     backgroundColor: "antiquewhite",
+    border: '.1rem solid black',
     marginTop: "30px"
   },
   details: {
-    display: "flex"
+    display: "flex",
+    justifyContent: 'center'
   },
   content: {
     flex: "1 0 auto",
     display: "flex",
     flexDirection: "column",
-    width: "50%",
     justifyContent: "space-between"
   },
   cover: {
@@ -35,7 +37,7 @@ const styles = theme => ({
     color: 'white',
     backgroundColor: '#3f51b5',
     fontSize: 'larger',
-    width: "22%",
+    width: "100%",
     height: '3rem',
     alignSelf: 'center',
     borderRadius: '5px'
@@ -78,7 +80,7 @@ class SingleCard extends React.Component {
     const { cards } = this.state;
     return (
       <div>
-        <Modal className='qrScanner' />
+        <Modal />
         <div>
           {cards &&
             cards.map(card => {
@@ -109,8 +111,6 @@ class SingleCard extends React.Component {
               );
             })}
         </div>
-        <div />
-        <Modal className={classes.qrscanner} />
       </div>
     );
   }

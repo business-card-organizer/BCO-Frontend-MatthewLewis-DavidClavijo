@@ -29,9 +29,9 @@ class Scanner extends Component {
           delay={300}
           onError={this.handleError}
           onScan={this.handleScan}
-          style={{ width: '100%' }}
+          style={{ width: '100%', borderRadius: '5rem'}}
         />
-        <p>{this.state.qrCode}</p>
+        {/* <p>{this.state.qrCode}</p> */}
       </div>
     )
   }
